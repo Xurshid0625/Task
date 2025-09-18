@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "148c10ec-b250-4670-9696-80ef5e90554c",
+		"name": "KutubxonaBoshqaruvTizimi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41259464"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "get all author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/authors",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get author id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/authors/1",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Xurshid Abdumannonov\",\n    \"bio\": \"Junior Developer\",\n    \"birth_date\": \"2006-06-25\",\n    \"nationality\": \"Uzbek\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books_url}}/authors",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Xurshid Abdumannonov\",\n    \"bio\": \"Junior Developer\",\n    \"birth_date\": \"2006-06-25\",\n    \"nationality\": \"Uzbek\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books_url}}/authors/1",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleted author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/authors/2",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/books",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookd id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/books/?search=SenvaMen",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "SenvaMen"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new books",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"O'tkan kunlar1\",\n    \"description\": \"O'zbek adabiyotining birinchi romani\",\n    \"isbn\": \"978-9943-01-123-33\",\n    \"published_date\": \"1925-01-01\",\n    \"pages\": 400,\n    \"language\": \"uzbek\",\n    \"total_copies\": 1,\n    \"author_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books_url}}/books",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"O'tkan kunlar\",\n    \"description\": \"O'zbek adabiyotining birinchi romani\",\n    \"isbn\": \"978-9943-01-123-2\",\n    \"published_date\": \"1925-01-01\",\n    \"pages\": 400,\n    \"language\": \"uzbek\",\n    \"total_copies\": 1,\n    \"author_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books_url}}/books/5",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleted book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/books/5",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rentals",
+			"item": [
+				{
+					"name": "get all rent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/rentals",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get rent id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/rentals/1",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created rent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\": 1,\n    \"renter_name\": \"Tet z\",\n    \"renter_email\": \"test@example.com\",\n    \"renter_phone\": \"+998901234567\",\n    \"rental_date\": \"2024-01-15\",\n    \"due_date\": \"2024-02-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books_url}}/rentals",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rent return",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/rentals/3/return",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals",
+								"3",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rentals overdue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/rentals/overdue",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals",
+								"overdue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rentals active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/rentals/active",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"rentals",
+								"active"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/report",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/statistics",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "most-rented-books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/most-rented-books",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"most-rented-books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "author-statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/author-statistics",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"author-statistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rental-trends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/rental-trends",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"rental-trends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "overdue-report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/overdue-report",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"overdue-report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "active-rentals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/active-rentals",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"active-rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "books-availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/books-availability",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"books-availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monthly-summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{books_url}}/reports/monthly-summary",
+							"host": [
+								"{{books_url}}"
+							],
+							"path": [
+								"reports",
+								"monthly-summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "books_url",
+			"value": ""
+		}
+	]
+}
